@@ -1,0 +1,35 @@
+extern function putch(fd, ch);
+extern function getch(fd);
+extern function write(fd, buf, count);
+
+function putnumber_rec(x) {
+	if (x > 0) {
+		putnumber_rec(x / 10);
+		putch(1, 48 + x % 10);
+	}
+}
+
+function putnum(x) {
+	if (x == 0) {
+		putch(1, 48); return;
+	}
+	if (x < 0) {
+		putch(1, 45); x = -1 * x;
+	}
+	putnumber_rec(x);
+}
+
+function getnum() {
+	int x; int ret; ret = 0; int sgn; sgn = 0;
+
+	while (x != 10) {
+		x = getch(1);
+		if (x == 45) if (sgn == 0) { sgn = -1; continue; }
+		if (x < 48) continue;
+		if (x > 57) continue;
+		ret = ret * 10 + (x - 48);
+	}
+	if (sgn == 0) sgn = 1;
+	return sgn * ret;
+}
+

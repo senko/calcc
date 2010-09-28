@@ -1,0 +1,32 @@
+
+			Calculator Compiler
+
+A tiny compiler for C-like language. Features:
+	- 32bit signed integer and 32bit floating point support
+	- string constants support via 'print' keyword
+	- support for C-style for(;;), while() and if()
+	- recursion support
+	- C-style function call implementation - can be linked with C libraries
+	- (g)libc independance
+
+Requirements:
+	- Linux 2.{2,4} / x86 platform
+	- NASM (Netwide Assembler)
+	- binutils (for linking)
+
+To compile CALCC type `make'. This will build the
+compiler (src/calcc), the libraries (lib/libcalc.a)
+and test programs under test/ directory.
+
+See test/*.calc files to get a hang of the syntax,
+and examine the compiler code for details - also, when
+running, the compiler is very verbose, so don't be
+alarmed :-)
+
+
+Author:
+	Senko Rasic <senko@senko.net>
+
+Linux I/O library routines by:
+	Matija Cizmek <mcizmek@fly.srk.fer.hr> 
+

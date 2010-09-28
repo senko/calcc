@@ -1,0 +1,12 @@
+
+2003-01-28  Senko Rasic  <senko@senko.net>
+
+	* Floating point support.
+	* Unneccessary copying of parameters into the stack frame removed.
+	* EAX value caching implemented (if the needed value is already in
+	  eax, it is used from there).
+
+2003-01-26  Senko Rasic  <senko@senko.net>
+
+	* Initial version.
+	

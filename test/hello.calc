@@ -1,0 +1,7 @@
+extern function write(fd, buf, count);
+
+function main()
+{
+	print "Hello world!\n";
+}
+

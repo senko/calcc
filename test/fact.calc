@@ -1,0 +1,19 @@
+extern function getnum();
+extern function putnum(num);
+extern function write(fd, buf, count);
+
+function fact(n)
+{
+	if (n < 1) return 1;
+	return n * fact(n - 1);
+}
+
+function main()
+{
+	int n;
+	print "Enter a number (1 - 12): ";
+	n = getnum();
+
+	putnum(n); print "! = "; putnum(fact(n)); print "\n";
+}
+
